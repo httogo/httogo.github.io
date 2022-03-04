@@ -145,6 +145,71 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/04/rtthread-amp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ZhangHao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="let's to go">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/04/rtthread-amp/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-04 09:25:23" itemprop="dateCreated datePublished" datetime="2022-03-04T09:25:23+08:00">2022-03-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>rtthread-pomegranate 编译</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/04/rtthread-amp/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/04/%E5%88%A9%E7%94%A8github%20pages%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -192,118 +257,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/04/rtthread-amp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ZhangHao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="let's to go">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/04/rtthread-amp/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-03-04 08:54:51" itemprop="dateCreated datePublished" datetime="2022-03-04T08:54:51+08:00">2022-03-04</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="安装依赖软件"><a href="#安装依赖软件" class="headerlink" title="安装依赖软件"></a>安装依赖软件</h2><pre><code>sudo apt install ninja-build pixman
-
-sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
-
-apt-get install libmount-dev
-
-sudo apt install android-sdk-ext4-utils
-
-sudo apt install scons
-
-sudo apt install device-tree-compiler
-</code></pre>
-<h2 id="clone仓库"><a href="#clone仓库" class="headerlink" title="clone仓库"></a>clone仓库</h2><pre><code>git clone https://github.com/RT-Thread/rtthread-pomegranate.git
-</code></pre>
-<h2 id="下载源码"><a href="#下载源码" class="headerlink" title="下载源码"></a>下载源码</h2><pre><code>./dn.sh
-// 如果下载不成功手动下载到`tarball`目录
-</code></pre>
-<h2 id="下载工具链"><a href="#下载工具链" class="headerlink" title="下载工具链"></a>下载工具链</h2><pre><code>// 下载后解压到源码目录下的`toolchains`目录
-https://toolchains.bootlin.com/downloads/releases/toolchains/riscv64/tarballs/riscv64--glibc--bleeding-edge-2020.08-1.tar.bz2
-</code></pre>
-<h2 id="编译u-boot"><a href="#编译u-boot" class="headerlink" title="编译u-boot"></a>编译u-boot</h2><pre><code>cd u-boot
-./build.sh
-</code></pre>
-<h2 id="生成根文件系统"><a href="#生成根文件系统" class="headerlink" title="生成根文件系统"></a>生成根文件系统</h2><pre><code>cd buildroot
-./build.sh
-</code></pre>
-<h2 id="编译linux"><a href="#编译linux" class="headerlink" title="编译linux"></a>编译linux</h2><pre><code>cd linux
-./build.sh
-</code></pre>
-<h2 id="修改linux下run-sh脚本"><a href="#修改linux下run-sh脚本" class="headerlink" title="修改linux下run.sh脚本"></a>修改linux下run.sh脚本</h2><pre><code>$&#123;QEMU_RUNTIME&#125; -nographic -smp 2 -machine virt -m 512M -kernel linux-5.12.3/arch/riscv/boot/Image -append &quot;root=/dev/vdarw console=ttyS1,115200n8 earlycon=sbi&quot; -drive file=$&#123;ROOT&#125;/output/rootfs.ext4,format=raw,id=hd0 -device virtio-blk-device,drive=hd0
-</code></pre>
-<h2 id="编译opensbi"><a href="#编译opensbi" class="headerlink" title="编译opensbi"></a>编译opensbi</h2><pre><code>cd opensbi
-./build.sh
-</code></pre>
-<h2 id="下载工具链-1"><a href="#下载工具链-1" class="headerlink" title="下载工具链"></a>下载工具链</h2><pre><code>cd toolchains
-// https://github.com/sifive/freedom-tools/releases
-wget https://static.dev.sifive.com/dev-tools/freedom-tools/v2020.12/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-linux-ubuntu14.tar.gz
-tar -xf riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-linux-ubuntu14.tar.gz
-
-// 添加工具链到环境变量，例如：
-export PATH=/home/ubuntu/rtthread-pomegranate/toolchains/riscv64-unknown-elf/bin:&quot;$PATH&quot;
-</code></pre>
-<h2 id="编译rtt"><a href="#编译rtt" class="headerlink" title="编译rtt"></a>编译rtt</h2><pre><code>// clone仓库
-cd rtos
-mkdir rt-thread
-git clone https://github.com/RT-Thread/rt-thread.git
-
-// 切换到最新代码，当前是v4.1.0-beta：
-git checkout v4.1.0-beta
-
-./build.sh
-
-// 运行
-./run.sh
-</code></pre>
-
       
     </div>
 
