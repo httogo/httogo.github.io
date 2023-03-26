@@ -28,7 +28,7 @@
 <meta property="og:description" content="搭建一个RISC-V开发测试环境">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-03-26T08:59:46.677Z">
-<meta property="article:modified_time" content="2023-03-26T09:20:58.240Z">
+<meta property="article:modified_time" content="2023-03-26T09:32:29.776Z">
 <meta property="article:author" content="ZhangHao">
 <meta name="twitter:card" content="summary">
 
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2023-03-26 16:59:46 / Modified: 17:20:58" itemprop="dateCreated datePublished" datetime="2023-03-26T16:59:46+08:00">2023-03-26</time>
+              <time title="Created: 2023-03-26 16:59:46 / Modified: 17:32:29" itemprop="dateCreated datePublished" datetime="2023-03-26T16:59:46+08:00">2023-03-26</time>
             </span>
 
           
@@ -194,7 +194,7 @@
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>RISC-V是目前最火的开源精简指令集架构，如果没有开发板或者使用开发板不方便的情况下可以使用QEMU模拟器模拟一个RISC-V架构的开发板来做实验。</p>
 <p>或者先在模拟器中使用电脑强大的性能做开发工作，完善后再放到真实的板子中去。</p>
 <p>今天我们使用BuildRoot工具编译内核并启动模拟的virt开发板。</p>
-<h2 id="buildroot下载"><a href="#buildroot下载" class="headerlink" title="buildroot下载"></a>buildroot下载</h2><h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h4><pre><code>https://buildroot.org/download.html
+<h2 id="buildroot编译"><a href="#buildroot编译" class="headerlink" title="buildroot编译"></a>buildroot编译</h2><h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h4><pre><code>https://buildroot.org/download.html
 </code></pre>
 <p>选择推荐的稳定版和长期支持版本下载即可。现在是2023年3月，复制压缩包下载地址后下载命令如下：</p>
 <pre><code>wget https://buildroot.org/downloads/buildroot-2023.02.tar.gz
@@ -297,7 +297,7 @@ make qemu_riscv64_virt_defconfig
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#buildroot%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">buildroot下载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number">2.0.1.</span> <span class="nav-text">下载地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B"><span class="nav-number">2.0.2.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E9%BB%98%E8%AE%A4%E7%9A%84riscv-virt%E5%BC%80%E5%8F%91%E6%9D%BF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.0.3.</span> <span class="nav-text">选择默认的riscv-virt开发板配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9"><span class="nav-number">2.0.4.</span> <span class="nav-text">自定义编译选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91"><span class="nav-number">2.0.5.</span> <span class="nav-text">编译</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#buildroot%E7%BC%96%E8%AF%91"><span class="nav-number">2.</span> <span class="nav-text">buildroot编译</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number">2.0.1.</span> <span class="nav-text">下载地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B"><span class="nav-number">2.0.2.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E9%BB%98%E8%AE%A4%E7%9A%84riscv-virt%E5%BC%80%E5%8F%91%E6%9D%BF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.0.3.</span> <span class="nav-text">选择默认的riscv-virt开发板配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9"><span class="nav-number">2.0.4.</span> <span class="nav-text">自定义编译选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91"><span class="nav-number">2.0.5.</span> <span class="nav-text">编译</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
