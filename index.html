@@ -145,6 +145,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/26/RISC-V%E7%B2%BE%E7%AE%80%E6%8C%87%E4%BB%A4%E9%9B%86%E7%9A%84Linux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(QEMU)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ZhangHao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="let's to go">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/26/RISC-V%E7%B2%BE%E7%AE%80%E6%8C%87%E4%BB%A4%E9%9B%86%E7%9A%84Linux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(QEMU)/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-26 16:59:46" itemprop="dateCreated datePublished" datetime="2023-03-26T16:59:46+08:00">2023-03-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>RISC-V是目前最火的开源精简指令集架构，如果没有开发板或者使用开发板不方便的情况下可以使用QEMU模拟器模拟一个RISC-V架构的开发板来做实验。</p>
+<p>或者先在模拟器中使用电脑强大的性能做开发工作，完善后再放到真实的板子中去。</p>
+<p>今天我们使用BuildRoot工具编译内核并启动模拟的virt开发板。</p>
+<h2 id="buildroot下载"><a href="#buildroot下载" class="headerlink" title="buildroot下载"></a>buildroot下载</h2><h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址:"></a>下载地址:</h4><pre><code>https://buildroot.org/download.html
+</code></pre>
+<p>选择推荐的稳定版和长期支持版本下载即可。现在是2023年3月，复制压缩包下载地址后下载命令如下：</p>
+<pre><code>wget https://buildroot.org/downloads/buildroot-2023.02.tar.gz
+</code></pre>
+<h4 id="解压："><a href="#解压：" class="headerlink" title="解压："></a>解压：</h4><pre><code>tar xzvf buildroot-2023.02.tar.gz
+</code></pre>
+<h4 id="选择默认的riscv-virt开发板配置文件："><a href="#选择默认的riscv-virt开发板配置文件：" class="headerlink" title="选择默认的riscv-virt开发板配置文件："></a>选择默认的riscv-virt开发板配置文件：</h4><pre><code>cd buildroot-2023.02
+make qemu_riscv64_virt_defconfig
+</code></pre>
+<h4 id="自定义编译选项："><a href="#自定义编译选项：" class="headerlink" title="自定义编译选项："></a>自定义编译选项：</h4><pre><code>make menuconfig
+</code></pre>
+<p>自定义菜单可以指定内核版本，调试信息，MMU支持，编译工具链，常用库，包管理工具等。</p>
+<p>如果不知道怎么选择可以直接save退出，使用默认选项。</p>
+<p>我这里选择了一些开发中可能会用到的工具：</p>
+<pre><code>clang gdb make git stress-ng rt-tests vim
+</code></pre>
+<p>如果找不到需要的包可以输入<code>/</code>来查找。</p>
+<h4 id="编译："><a href="#编译：" class="headerlink" title="编译："></a>编译：</h4><pre><code>make
+</code></pre>
+<p>ps. 编译过程中如果下载压缩包失败也可以手动下载后放到dl文件夹下相应的目录中去。</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><pre><code>cd output/images
+./start_qemu.sh
+</code></pre>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><pre><code>buildroot用户手册: https://buildroot.org/downloads/manual/manual.html
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/08/ethercat%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -341,112 +427,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/27/xv6%E5%8D%95%E8%AF%8D%E6%91%98%E5%BD%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ZhangHao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="let's to go">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/27/xv6%E5%8D%95%E8%AF%8D%E6%91%98%E5%BD%95/" class="post-title-link" itemprop="url">xv6单词摘录</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-12-27 15:45:30" itemprop="dateCreated datePublished" datetime="2021-12-27T15:45:30+08:00">2021-12-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-07 10:56:37" itemprop="dateModified" datetime="2022-06-07T10:56:37+08:00">2022-06-07</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <span id="more"></span>
-
-<blockquote>
-<p><strong>lack</strong> <em>[læk]</em> 缺乏, 短缺的东西</p>
-</blockquote>
-<p><code>It is a minimal shell and lacks many features found inreal shell.</code></p>
-<hr>
-<blockquote>
-<p><strong>completion</strong> <em>[kəmˈpliːʃn]</em> 完成</p>
-</blockquote>
-<p><code>modify the shell to support tab completion (easy), modify the shell to keep a history of passed shell commands (moderate), or anything else you would like your shell to do.</code></p>
-<hr>
-<blockquote>
-<p><strong>implement</strong> <em>[ˈɪmplɪmənt]</em> 执行</p>
-</blockquote>
-<p><code>S081 Objectives • Understand how OSes are designed and implemented • Hands-on experience building systems software • Will extend a simple OS (xv6) • Will learn about how hardware works (Risc-V)</code></p>
-<hr>
-<blockquote>
-<p><strong>stack</strong> <em>[stæk]</em> 堆, 一堆, 堆栈</p>
-</blockquote>
-<p><code>You will build a driver for a network stack that sends packets over the real Internet 2.</code></p>
-<hr>
-<blockquote>
-<p><strong>scale</strong> <em>[skeɪl]</em> 刻度,衡量,比例,数值范围,比例尺,天平,等级</p>
-</blockquote>
-<p><code>You will redesign a memory allocator so that it can scale across multiple cores 3.</code></p>
-<hr>
-<blockquote>
-<p><strong>generality</strong> <em>[ˌdʒenəˈræləti]</em> 一般性</p>
-</blockquote>
-<p><code>Portability\/Generality • Powerful vs.</code></p>
-<hr>
-<blockquote>
-<p><strong>feature</strong> <em>[ˈfiːtʃər]</em>  面貌的一部分(眼,口,鼻等)特征, 容貌, 特色, 特写</p>
-</blockquote>
-<p><code>Secure • Challenge: good orthogonality, feature interactions • Varied uses from smartbulbs to supercomputers • Evolving HW: NVRAM, Multicore, 200Gbit networks</code></p>
-<hr>
-<blockquote>
-<p><strong>traditional</strong> <em>[trəˈdɪʃənl]</em> 传统的, 惯例的, 口传的, 传说的</p>
-</blockquote>
-<p><code>As Figure 1.1 shows, xv6 takes the traditional form of a kernel, a special program that provides services to running programs.</code></p>
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/markdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -496,72 +476,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/09/16/markdown/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ZhangHao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="let's to go">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/16/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-09-16 13:11:21 / Modified: 15:04:27" itemprop="dateCreated datePublished" datetime="2021-09-16T13:11:21+08:00">2021-09-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/09/16/hello-world/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -647,7 +561,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

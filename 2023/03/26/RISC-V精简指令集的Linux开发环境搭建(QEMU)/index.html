@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+  <meta name="description" content="简介RISC-V是目前最火的开源精简指令集架构，如果没有开发板或者使用开发板不方便的情况下可以使用QEMU模拟器模拟一个RISC-V架构的开发板来做实验。 或者先在模拟器中使用电脑强大的性能做开发工作，完善后再放到真实的板子中去。 今天我们使用BuildRoot工具编译内核并启动模拟的virt开发板。 buildroot下载下载地址:https:&#x2F;&#x2F;buildroot.org&#x2F;download.h">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2021/09/16/hello-world/index.html">
+<meta property="og:title" content="let&#39;s to go">
+<meta property="og:url" content="http://example.com/2023/03/26/RISC-V%E7%B2%BE%E7%AE%80%E6%8C%87%E4%BB%A4%E9%9B%86%E7%9A%84Linux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(QEMU)/index.html">
 <meta property="og:site_name" content="let&#39;s to go">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="简介RISC-V是目前最火的开源精简指令集架构，如果没有开发板或者使用开发板不方便的情况下可以使用QEMU模拟器模拟一个RISC-V架构的开发板来做实验。 或者先在模拟器中使用电脑强大的性能做开发工作，完善后再放到真实的板子中去。 今天我们使用BuildRoot工具编译内核并启动模拟的virt开发板。 buildroot下载下载地址:https:&#x2F;&#x2F;buildroot.org&#x2F;download.h">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-09-16T05:11:21.738Z">
-<meta property="article:modified_time" content="2021-09-16T07:04:27.999Z">
+<meta property="article:published_time" content="2023-03-26T08:59:46.677Z">
+<meta property="article:modified_time" content="2023-03-26T08:59:46.677Z">
 <meta property="article:author" content="ZhangHao">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/09/16/hello-world/">
+<link rel="canonical" href="http://example.com/2023/03/26/RISC-V%E7%B2%BE%E7%AE%80%E6%8C%87%E4%BB%A4%E9%9B%86%E7%9A%84Linux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(QEMU)/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Hello World | let's to go</title>
+  <title> | let's to go</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/26/RISC-V%E7%B2%BE%E7%AE%80%E6%8C%87%E4%BB%A4%E9%9B%86%E7%9A%84Linux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(QEMU)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          
         </h1>
 
         <div class="post-meta">
@@ -172,9 +172,8 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-09-16 13:11:21 / Modified: 15:04:27" itemprop="dateCreated datePublished" datetime="2021-09-16T13:11:21+08:00">2021-09-16</time>
+              <time title="Created: 2023-03-26 16:59:46" itemprop="dateCreated datePublished" datetime="2023-03-26T16:59:46+08:00">2023-03-26</time>
             </span>
 
           
@@ -188,21 +187,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>RISC-V是目前最火的开源精简指令集架构，如果没有开发板或者使用开发板不方便的情况下可以使用QEMU模拟器模拟一个RISC-V架构的开发板来做实验。</p>
+<p>或者先在模拟器中使用电脑强大的性能做开发工作，完善后再放到真实的板子中去。</p>
+<p>今天我们使用BuildRoot工具编译内核并启动模拟的virt开发板。</p>
+<h2 id="buildroot下载"><a href="#buildroot下载" class="headerlink" title="buildroot下载"></a>buildroot下载</h2><h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址:"></a>下载地址:</h4><pre><code>https://buildroot.org/download.html
+</code></pre>
+<p>选择推荐的稳定版和长期支持版本下载即可。现在是2023年3月，复制压缩包下载地址后下载命令如下：</p>
+<pre><code>wget https://buildroot.org/downloads/buildroot-2023.02.tar.gz
+</code></pre>
+<h4 id="解压："><a href="#解压：" class="headerlink" title="解压："></a>解压：</h4><pre><code>tar xzvf buildroot-2023.02.tar.gz
+</code></pre>
+<h4 id="选择默认的riscv-virt开发板配置文件："><a href="#选择默认的riscv-virt开发板配置文件：" class="headerlink" title="选择默认的riscv-virt开发板配置文件："></a>选择默认的riscv-virt开发板配置文件：</h4><pre><code>cd buildroot-2023.02
+make qemu_riscv64_virt_defconfig
+</code></pre>
+<h4 id="自定义编译选项："><a href="#自定义编译选项：" class="headerlink" title="自定义编译选项："></a>自定义编译选项：</h4><pre><code>make menuconfig
+</code></pre>
+<p>自定义菜单可以指定内核版本，调试信息，MMU支持，编译工具链，常用库，包管理工具等。</p>
+<p>如果不知道怎么选择可以直接save退出，使用默认选项。</p>
+<p>我这里选择了一些开发中可能会用到的工具：</p>
+<pre><code>clang gdb make git stress-ng rt-tests vim
+</code></pre>
+<p>如果找不到需要的包可以输入<code>/</code>来查找。</p>
+<h4 id="编译："><a href="#编译：" class="headerlink" title="编译："></a>编译：</h4><pre><code>make
+</code></pre>
+<p>ps. 编译过程中如果下载压缩包失败也可以手动下载后放到dl文件夹下相应的目录中去。</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><pre><code>cd output/images
+./start_qemu.sh
+</code></pre>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><pre><code>buildroot用户手册: https://buildroot.org/downloads/manual/manual.html
+</code></pre>
 
     </div>
 
@@ -217,11 +230,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/09/16/markdown/" rel="next" title="HEXO-MarkDown使用指南">
-      HEXO-MarkDown使用指南 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/10/08/ethercat%E5%AE%89%E8%A3%85/" rel="prev" title="Igh-ethercat主站编译安装">
+      <i class="fa fa-chevron-left"></i> Igh-ethercat主站编译安装
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -280,7 +293,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#buildroot%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">buildroot下载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number">2.0.1.</span> <span class="nav-text">下载地址:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B%EF%BC%9A"><span class="nav-number">2.0.2.</span> <span class="nav-text">解压：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E9%BB%98%E8%AE%A4%E7%9A%84riscv-virt%E5%BC%80%E5%8F%91%E6%9D%BF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="nav-number">2.0.3.</span> <span class="nav-text">选择默认的riscv-virt开发板配置文件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9%EF%BC%9A"><span class="nav-number">2.0.4.</span> <span class="nav-text">自定义编译选项：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%EF%BC%9A"><span class="nav-number">2.0.5.</span> <span class="nav-text">编译：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -294,7 +307,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
